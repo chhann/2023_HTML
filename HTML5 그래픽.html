@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    
+    <title>My peage Title</title>
+    <link rel="icon" type="image/svg" href="./img/2056977.svg">
+</head>
+<body>
+    <h1>canvas</h1>
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid black">
+    
+    </canvas>
+    <!-- script에 자바스크립트 작성 -->
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d")
+        
+
+        context.fillStyle="#FF0000";
+        context.fillRect(0,0,150,75);
+        context.fillStyle="#0000FF";
+        context.fillRect(10,10,150,75);
+
+        context.strokeStyle="#000000";
+        context.moveTo(0,0);
+        context.lineTo(200,100);
+        context.stroke();
+
+        context.fillStyle="#FFFF00"
+        context.fillText("Heollo World",10,50);
+
+        context.font="30px Arial";
+        context.strokeText("Hi",10,75);
+        /*
+        자바스크립트는 위에서 아래로 실행된다
+        .명령어() : 이 형태를 통해 명령어를 실행할 수 있다
+        let 변수이름 = 값 : 값을 변수에 담아서 사용한다
+        */
+
+
+    // 그라디언트 생성
+        let grd = context.createRadialGradient(75,50,5,90,60,100);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"yellow");
+
+    //그라디언트 사용
+            context.fillStyle=grd;
+            context.fillRect(10,10,150,80);
+</script>
+
+
+
+        
+        
+        <svg widyh="200" height="100" style="border: solid black 1px;">
+            <line
+                x1="50" y1="50" x2="200" y2="100"
+                stroke="orange"
+                stroke-width="5">
+            </line>
+        </svg>
+
+        <img src="./img/2056977.svg" alt="" width="200">
+        <p>
+            svg는 웹용 백터 파일 > 웹에서 열어서 확인할 수 있다 <br>
+            코드로도 들고올수 있고 파일 형식으로도 들고 올 수 있다<br>
+            백터형식이기 때문에 확대해도 깨지지 않는다
+        </p>
+
+
+
+</body>
+</html>

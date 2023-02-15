@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML5 멀티미디어</h1>
+    <h2>video</h2>
+    <video src="./mp4/KakaoTalk_20230213_164409623.mp4"
+            style="width: 576px; height: 360px;"
+            controls autoplay muted loop>
+    </video>
+    <p>
+        controls : 플레이버튼과 남은시간, 소리표시<br>
+        autoplay : 자동실행 (단, muted상태일떄)<br>
+        muted : 무음 <br>
+        loop : 계속 반복 <br>
+    </p>
+    <hr>
+    <h2>플러그인</h2>
+    <h3>object</h3>
+    <object data="./data/3일차 HTML5.pdf" type=""></object>
+    <object data="./img/mobile_205213285790.jpg" type=""></object>
+    <p>object 태그는 다양한 파일들을 화면에 출력하는 태그</p>
+<hr>
+    <h1>embed</h1>
+    <embed src="./data/3일차 HTML5.pdf" type="">
+    <embed src="./img/mobile_205213285790.jpg" type="">
+    <p>embed object와 동일하게 사용할 수 있다</p>
+    <hr>
+    
+    <h3>유튜브 영상들고오기</h3>
+    <iframe 
+    width="853"
+    height="480" 
+    src="https://www.youtube.com/embed/jN7oF4sxgQ4?mute=1&autoplay=1&" 
+    title="21년째 유령 상가의 비밀 - 부산 네오스포 상가 이야기 - 전반부 - PD수첩 2023년2월7일 방송" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen></iframe>
+    
+    <p>
+        소스코드로 복사해오면 iframe안에 설정이 되어서
+        들고올수 있다
+    </p>
+    <p>
+        video의 설정을 유투브에서도 적용할 수 있다 <br>
+        url뒤에 ?를 이용한 "쿼리스트링"으로 작성할 수 있다 <br>
+        ?mute=1&autoplay=1 같은 값으로 들어간다 <br>
+        1은 true 참이라는 뜻으로 사용, 
+        0은 false 거짓이라는 갑으로 사용
+    </p>
+</body>
+</html>
